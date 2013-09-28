@@ -4,7 +4,7 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :video_link  if f.respond_to?(:video_link) %>
+    <%= f.input :video_link if @episode.respond_to?(:video_link) %>
     <%= f.input :paid %>
   </div>
 
