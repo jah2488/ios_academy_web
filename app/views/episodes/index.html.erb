@@ -1,4 +1,4 @@
-<h1>Listing episodes</h1>
+<h2>Listing episodes</h2>
 
 <table class='table table-hover'>
   <thead>
@@ -16,7 +16,7 @@
   <tbody>
     <% @episodes.each do |episode| %>
       <tr>
-        <td><%= image_tag(episode.image.url(:thumb)) %></td>
+        <td><%= image_tag(episode.image.url(:thumb), class: 'img-polaroid') %></td>
         <td><%= episode.title %></td>
         <td><%= episode.description %></td>
         <td><%= episode.video_id %></td>
