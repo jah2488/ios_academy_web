@@ -1,4 +1,5 @@
 IosAcademyWeb::Application.routes.draw do
+  devise_for :admins
   resources :episodes
 
   devise_for :users

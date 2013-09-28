@@ -1,5 +1,5 @@
 class EpisodesController < InheritedResources::Base
-  before_filter :authenticate_user!, except: :index
+  before_filter :authenticate_all!,  except: :index
 
   private
   def permitted_params
