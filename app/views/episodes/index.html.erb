@@ -17,9 +17,9 @@
     <% @episodes.each do |episode| %>
       <tr>
         <td><%= image_tag(episode.image.url(:thumb), class: 'img-polaroid') %></td>
-        <td><%= episode.title %></td>
+        <td><%= episode.title %><br/><span class='label label-info'><%= episode.paid_or_free %></span></td>
         <td><%= episode.description %></td>
-        <td><%= episode.video_id %></td>
+        <td><%= episode.video_link %></td>
         <td><%= link_to 'Show', episode, class: 'btn btn-large' %></td>
         <td><%= link_to('Edit', edit_episode_path(episode), class: 'btn') if current_admin %></td>
         <td><%= link_to('Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger') if current_admin %></td>

@@ -1,9 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @episode.title %>
 </p>
+<h4><%= @episode.paid_or_free %></h4>
 
 <p>
   <strong>Description:</strong>
@@ -12,8 +11,9 @@
 
 <p>
   <strong>Video:</strong>
-  <%= @episode.video_id %>
+  <%= @episode.video_link %>
 </p>
 
-<%= link_to 'Edit', edit_episode_path(@episode), class: 'btn' %> |
+
+<%= link_to 'Edit', edit_episode_path(@episode), class: 'btn' if current_admin %>
 <%= link_to 'Back', episodes_path, class: 'btn' %>
