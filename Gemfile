@@ -18,6 +18,7 @@ end
 
 gem 'rails'                , '~> 4.0'
 gem 'paperclip'            , '~> 3.5'
+gem 'aws-sdk'
 gem 'pg'                   , '~> 0.17'
 gem 'unicorn'              , '~> 4.6'
 gem 'jquery-rails'         , '~> 3.0'
