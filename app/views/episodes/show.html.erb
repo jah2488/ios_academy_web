@@ -1,10 +1,11 @@
 
 <h2><%= @episode.title %></h2>
-<h4><%= @episode.paid_or_free %></h4>
+<h4><span class='label label-info'><%= @episode.paid_or_free %></span></h4>
 
 
-<video id="<%= @episode.video_link %>" class="sublime" width="1024" height="576" data-uid="<%= @episode.video_link %>" data-youtube-id="<%= @episode.video_link %>" preload="none">
-</video>
+<div id='video-wrapper'>
+  <video id="<%= @episode.video_link %>" class="sublime" width="1024" height="576" data-uid="<%= @episode.video_link %>" data-youtube-id="<%= @episode.video_link %>" preload="none"></video>
+</div>
 
 <div style='margin: 10px;'>
   <p class='muted'> <%= @episode.description %> </p>
