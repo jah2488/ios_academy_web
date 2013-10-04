@@ -1,19 +1,14 @@
-<p>
-  <strong>Title:</strong>
-  <%= @episode.title %>
-</p>
+
+<h2><%= @episode.title %></h2>
 <h4><%= @episode.paid_or_free %></h4>
 
-<p>
-  <strong>Description:</strong>
-  <%= @episode.description %>
-</p>
 
-<p>
-  <strong>Video:</strong>
-  <%= @episode.video_link %>
-</p>
+<video id="<%= @episode.video_link %>" class="sublime" width="1024" height="576" data-uid="<%= @episode.video_link %>" data-youtube-id="<%= @episode.video_link %>" preload="none">
+</video>
 
+<div style='margin: 10px;'>
+  <p class='muted'> <%= @episode.description %> </p>
+</div>
 
 <%= link_to 'Edit', edit_episode_path(@episode), class: 'btn' if current_admin %>
 <%= link_to 'Back', episodes_path, class: 'btn' %>
